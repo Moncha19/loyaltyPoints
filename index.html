@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, initial-scale=1.0">
+    <title>Loyalty Points</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 640px;
+            max-width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666666;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        .input-group select {
+            border: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+        }
+
+        .input-group input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+        }
+
+        .input-group svg {
+            width: 24px;
+            height: 24px;
+            color: #cccccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e65c00;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">MULAH</div>
+        <h1>Hello, Welcome!</h1>
+        <p>Check Your Loyalty Points & Rewards</p>
+        <div class="input-group">
+            <select>
+                <option>+60</option>
+            </select>
+            <input id="phoneInput" type="text" placeholder="Enter your mobile number" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <button onclick="checkLoyaltyPoints()">Check Loyalty Points</button>
+        <footer>
+            Powered by <a href="https://www.MulahRewards.com">MulahRewards.com</a>
+        </footer>
+    </div>
+
+    <script>
+        function checkLoyaltyPoints() {
+            const phoneInput = document.getElementById('phoneInput').value;
+
+            if (phoneInput === '60173527250') {
+                alert('Loyalty points found!');
+                window.location.href = 'page2.html'; // Redirect to Page 2
+            } else {
+                alert('Invalid phone number. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+

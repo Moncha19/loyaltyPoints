@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 640px;
+            max-width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666666;
+        }
+
+        .details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .details div {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e65c00;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">MULAH</div>
+        <h1>Your Details</h1>
+        <p>Here are the details you provided:</p>
+        <div class="details">
+            <div><strong>Name:</strong> <span id="displayName"></span></div>
+            <div><strong>Birthday:</strong> <span id="displayBirthday"></span></div>
+            <div><strong>Email:</strong> <span id="displayEmail"></span></div>
+        </div>
+        <button onclick="goBack()">Edit Details</button>
+        <footer>
+            Powered by <a href="https://www.MulahRewards.com">MulahRewards.com</a>
+        </footer>
+    </div>
+
+    <script>
+        // Load details from localStorage
+        document.getElementById('displayName').textContent = localStorage.getItem('name') || 'N/A';
+        document.getElementById('displayBirthday').textContent = localStorage.getItem('birthday') || 'N/A';
+        document.getElementById('displayEmail').textContent = localStorage.getItem('email') || 'N/A';
+
+        // Function to go back to the previous page
+        function goBack() {
+            window.location.href = 'page2.html';
+        }
+    </script>
+</body>
+</html>
